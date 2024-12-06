@@ -1,18 +1,27 @@
-package ifma.lista04;
+package ifma.lista01;
 
 public class Aluno {
+    private int codigo;
     private String nome;
-    private double nota1;
-    private double nota2;
 
-    public Aluno(String nome, double nota1, double nota2) {
+    public Aluno(int codigo, String nome) {
+        this.codigo = codigo;
         this.nome = nome;
-        this.nota1 = nota1;
-        this.nota2 = nota2;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     @Override
     public String toString() {
-        return "(" + nome + ", " + nota1 + ", " + nota2 + ")";
+        return "Aluno{" +
+                "codigo=" + codigo +
+                ", nome='" + nome + '\'' +
+                '}';
     }
 }
